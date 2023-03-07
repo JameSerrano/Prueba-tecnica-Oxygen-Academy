@@ -1,0 +1,168 @@
+*{
+    font-family: 'Courier Prime', monospace;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+
+}
+
+body{
+    width: 1728px;
+    height: 48px;
+}
+
+/*------------ HEADER ------------*/
+
+header div{
+    width: 1728px;
+    height: 48px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+}
+
+header i img{
+    height: 18px;
+    width: 20.666667938232422px;
+}
+
+
+header div h1{
+    position: absolute;
+    width: 156px;
+    height: 31px;
+    padding-left: 572px;
+    margin-top: 5px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #2E0039;
+}
+
+header div i{
+    width: 20.67px;
+    height: 18px;
+    padding: 15 0 15 534px;
+}
+
+/* ---------------- APLICACIÓN----------*/
+.contenedor {
+    height: 193px;
+    width: 714px;
+    margin-left: 529px;
+    margin-top: 51px;
+    border-radius: 21px;
+    background: #2E0039;
+    box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 21px;
+}
+
+.contenedor h1{
+    position: absolute;
+    width: 104px;
+    height: 35px;
+    left: 567px;
+    top: 123px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #FFFFFF;
+}
+
+#seleccion{
+    position: absolute;
+    width: 254px;
+    height: 32px;
+    left: 567px;
+    top: 181px;
+    background-color: #2E0039;
+    color: #FFFFFF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+
+
+.recuadro{
+    width:221px;
+    margin-left: 50px;
+    padding-left: 100px;
+    background-color: #2E0039;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+div label{
+    color: white;
+}
+
+.corazon{
+    height: 14.5px;
+    width: 17.5px;
+    padding-right: 300px;
+    padding-top: 35px;
+    padding-left: 50px;
+    border-radius: 0px;
+    color: #FFFFFF;
+}
+
+#resultado{
+    height: 30px;
+    width: 63px;
+    left: 1056px;
+    padding-left: 550px;
+    margin-top:-25px;
+    color: #FFFFFF;
+
+}
+
+#distancia{
+    color: #FFFFFF;
+}
+
+#resultado{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+
+}
+
+/* ---------------- BOTONES----------*/
+.icono1 {
+    
+    height: 13.5px;
+    width: 15.5px;
+    padding-left: 300px;
+    padding-top: 90px;
+    border-radius: 0px;
+    color: #FFFFFF;
+}
+
+
+.btn{
+    
+    padding: 0;
+    box-sizing: content-box;
+}
+
+
+
+/* Intenté hacer el media Query pero no conseguí cuadrarlo para las dimensiones de móvil*/

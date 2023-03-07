@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/0d4d477689.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <i class="icono fa-solid fa-right-left"></i>
+            <h1>unit converter</h1>
+        </div>
+    </header>
+
+    <main>
+        
+        <div class="contenedor">
+            <h1>convert</h1>
+            
+            <select id="seleccion" name="select" value="" onchange="seleccionarOpcion()" >
+                <h1>convert</h1>
+                <option value="select1" selected>km - millas</option>
+                <option value="select2"  >millas - km</option>
+                <option value="select3"  >pies - metros</option>
+                <option value="select4"  >metros - pies</option>
+            </select>
+
+            <button class="btn" onclick="cambiarSelector()"><i class="icono1 fa-solid fa-right-left"></i></button>
+
+            <input class="recuadro" type="number" name="nombre"  value="0"  oninput="seleccionarOpcion()" />
+            <label for="nombre" id="medida"></label>
+            <i class="corazon fa-regular fa-heart"></i>
+            <span id="resultado"></span>
+
+
+            <script>
+
+                // FUNCIÓN PARA CONVERTIR LAS MEDIDAS Y SELECCIONAR LA OPCIÓN //
+                    function seleccionarOpcion() {
+                        let option = document.getElementsByName("select")[0].value;
+                        option = document.getElementById("seleccion").value;
+                    
+                        const valor = document.querySelector(".recuadro").value;
+                        let resultado = "";
+                        let medida = "";
+                        if (option === "select1") {
+                            medida = "km"
+                            const milla = 0.62;
+                            resultado = (valor * milla).toFixed(2) + " millas";
+                        } else if (option === "select2") {
+                            medida = "millas"
+                            const km = 1.61;
+                            resultado = (valor * km).toFixed(2) + " km";
+                        } else if (option === "select3") {
+                            medida = "pies"
+                            const metros = 0.30;
+                            resultado = (valor * metros).toFixed(2) + " metros";
+                        } else if (option === "select4") {
+                            medida = "metros"
+                            const pies = 3.28;
+                            resultado = (valor * pies).toFixed(2) + " pies";
+                        }
+                        document.querySelector("#resultado").innerHTML = resultado;
+                        document.getElementById("medida").innerHTML = medida;
+                        
+                    }
+
+
+
+            // FUNCIÓN PARA CAMBIAR SELECCION //
+
+                    function cambiarSelector(){
+                        let option = document.getElementsByName("select")[0].value;
+                        
+                        const seleccion = document.querySelector('#seleccion')
+                        let cambioMedida ="";
+
+                        if (option === "select1") {
+                            cambioMedida = "select2"
+                        } else if (option === "select2"){
+                            cambioMedida = "select1";
+
+                        } else if (option === "select3"){
+                            cambioMedida = "select4";
+                        } else if (option === "select4"){
+                            cambioMedida = "select3";
+                        }
+
+                        seleccion.value = cambioMedida;
+                        
+                        seleccionarOpcion();
+                    }
+
+
+
+            </script>
+        </div>
+        
+    </main>
+</body>
+</html>
